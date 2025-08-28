@@ -1,0 +1,22 @@
+---
+apiVersion: devopstoolkitseries.com/v1alpha1
+kind: AppClaim
+metadata:
+  annotations:
+    gitHubOrg: ET-IDP-POC
+    gitHubRepo: idp-demo-app-2
+  name: idp-demo-app-2
+spec:
+  id: idp-demo-app-2
+  compositionSelector:
+    matchLabels:
+      type: backend-db-aws
+      location: local
+  parameters:
+    namespace: development
+    image: docker.io/jwhinn/idp-demo-app-2:latest
+    port: 8080
+    host: acme.com
+    db:
+      version: "13"
+      size: medium

@@ -1,0 +1,13 @@
+apiVersion: databases.schemahero.io/v1alpha4
+kind: Database
+metadata:
+  name: idp-demo-app-2
+spec:
+  connection:
+    postgres:
+      host:
+        value: idp-demo-app-2-postgresql
+      password: 
+        valueFrom:
+          secretKeyRef:
+            name: idp-demo-app-2-postgresql
