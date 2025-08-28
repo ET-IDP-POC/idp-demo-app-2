@@ -1,0 +1,8 @@
+apiVersion: devopstoolkitseries.com/v1alpha1
+kind: AppClaim
+metadata:
+  name: idp-demo-app-2
+spec:
+  parameters:
+    namespace: production
+    image: docker.io/vfarcic/idp-demo-app-2:0.0.0

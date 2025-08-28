@@ -1,0 +1,13 @@
+apiVersion: devopstoolkitseries.com/v1alpha1
+kind: AppClaim
+metadata:
+  name: idp-demo-app-2
+spec:
+  id: idp-demo-app-2
+  parameters:
+    namespace: production
+    image: docker.io/vfarcic/idp-demo-app-2:0.0.0
+    host: acme.com
+  compositionSelector:
+    matchLabels:
+      type: backend-db-local
